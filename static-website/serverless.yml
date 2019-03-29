@@ -1,0 +1,15 @@
+type: example-docs
+version: 1.0.0
+
+components:
+  blogSite:
+    type: static-website
+    inputs:
+      name: docops
+      contentPath: ${self.path}/site
+      templateValues: {}
+      contentIndex: index.html
+      contentError: error.html
+      hostingRegion: us-east-1
+      hostingDomain: horizonsandbox.com
+      aliasDomain: do.horizonsandbox.com

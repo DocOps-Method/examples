@@ -1,0 +1,196 @@
+{
+  "$": {
+    "serviceId": "6ucp1quwll"
+  },
+  "example-docs": {
+    "instanceId": "6ucp1quwll-atjlyrtw"
+  },
+  "example-docs:blogSite": {
+    "type": "static-website",
+    "state": {
+      "name": "docops",
+      "contentPath": "/Users/vadim/Development/DocOps/examples/static-website/site",
+      "templateValues": {},
+      "contentIndex": "index.html",
+      "contentError": "error.html",
+      "hostingRegion": "us-east-1",
+      "hostingDomain": "horizonsandbox.com.",
+      "aliasDomain": "do.horizonsandbox.com",
+      "url": "http://horizonsandbox.com..s3-website-us-east-1.amazonaws.com"
+    },
+    "instanceId": "6ucp1quwll-9p4od2sy",
+    "internallyManaged": false,
+    "rootPath": "../../../../../../usr/local/lib/node_modules/serverless-components/registry/static-website",
+    "inputs": {
+      "name": "docops",
+      "contentPath": "/Users/vadim/Development/DocOps/examples/static-website/site",
+      "templateValues": {},
+      "contentIndex": "index.html",
+      "contentError": "error.html",
+      "hostingRegion": "us-east-1",
+      "hostingDomain": "horizonsandbox.com",
+      "aliasDomain": "do.horizonsandbox.com"
+    }
+  },
+  "example-docs:blogSite:renderedFiles": {
+    "instanceId": "6ucp1quwll-r3oh2l14"
+  },
+  "example-docs:blogSite:rootDomainBucketPolicy": {
+    "type": "s3-policy",
+    "state": {
+      "bucketName": "horizonsandbox.com"
+    },
+    "instanceId": "6ucp1quwll-dxpxfji2",
+    "internallyManaged": false,
+    "rootPath": "../../../../../../usr/local/lib/node_modules/serverless-components/registry/s3-policy",
+    "inputs": {
+      "bucketName": "horizonsandbox.com"
+    }
+  },
+  "example-docs:blogSite:rootDomainBucket": {
+    "type": "aws-s3-bucket",
+    "state": {
+      "name": "horizonsandbox.com"
+    },
+    "instanceId": "6ucp1quwll-x503tnap",
+    "internallyManaged": false,
+    "rootPath": "../../../../../../usr/local/lib/node_modules/serverless-components/registry/aws-s3-bucket",
+    "inputs": {
+      "name": "horizonsandbox.com"
+    }
+  },
+  "example-docs:blogSite:wwwDomainBucket": {
+    "type": "aws-s3-bucket",
+    "state": {
+      "name": "do.horizonsandbox.com"
+    },
+    "instanceId": "6ucp1quwll-231lbif1",
+    "internallyManaged": false,
+    "rootPath": "../../../../../../usr/local/lib/node_modules/serverless-components/registry/aws-s3-bucket",
+    "inputs": {
+      "name": "do.horizonsandbox.com"
+    }
+  },
+  "example-docs:blogSite:siteContentUploader": {
+    "type": "s3-sync",
+    "state": {
+      "contentPath": "/var/folders/5r/wh15_25d4nq0dpy5tywjwsfw0000gn/T/tmp-11406SB1Vb9LgXw0J",
+      "bucketName": "horizonsandbox.com"
+    },
+    "instanceId": "6ucp1quwll-tdy12zoq",
+    "internallyManaged": false,
+    "rootPath": "../../../../../../usr/local/lib/node_modules/serverless-components/registry/s3-sync",
+    "inputs": {
+      "contentPath": "/var/folders/5r/wh15_25d4nq0dpy5tywjwsfw0000gn/T/tmp-11406SB1Vb9LgXw0J",
+      "bucketName": "horizonsandbox.com"
+    }
+  },
+  "example-docs:blogSite:rootDomainBucketConfig": {
+    "type": "s3-website-config",
+    "state": {
+      "rootBucketName": "horizonsandbox.com",
+      "indexDocument": "index.html",
+      "errorDocument": "error.html",
+      "redirectBucketName": "do.horizonsandbox.com",
+      "redirectToHostName": "horizonsandbox.com"
+    },
+    "instanceId": "6ucp1quwll-qrt1m7m2",
+    "internallyManaged": false,
+    "rootPath": "../../../../../../usr/local/lib/node_modules/serverless-components/registry/s3-website-config",
+    "inputs": {
+      "rootBucketName": "horizonsandbox.com",
+      "indexDocument": "index.html",
+      "errorDocument": "error.html",
+      "redirectBucketName": "do.horizonsandbox.com",
+      "redirectToHostName": "horizonsandbox.com"
+    }
+  },
+  "example-docs:blogSite:siteRoute53Config": {
+    "type": "aws-route53",
+    "state": {
+      "name": "docops-site-6ucp1quwll-9p4od2sy",
+      "domainName": "do.horizonsandbox.com",
+      "dnsName": "d19fuiur7dxmtc.cloudfront.net",
+      "hostedZone": {
+        "id": "/hostedzone/Z12ITGBWT5KB8Y",
+        "name": "do.horizonsandbox.com.",
+        "callerReference": "docops-site-6ucp1quwll-9p4od2sy-1542041436",
+        "resourceRecordSetCount": 2,
+        "privateZone": false,
+        "location": "https://route53.amazonaws.com/2013-04-01/hostedzone/Z12ITGBWT5KB8Y",
+        "changeInfo": {
+          "id": "/change/C1KI2T61NU6KH",
+          "status": "PENDING",
+          "submittedAt": "2018-11-12T16:50:37.472Z"
+        },
+        "delegationSet": {
+          "nameServers": [
+            "ns-1296.awsdns-34.org",
+            "ns-591.awsdns-09.net",
+            "ns-1647.awsdns-13.co.uk",
+            "ns-315.awsdns-39.com"
+          ]
+        }
+      },
+      "changeRecordSet": {
+        "changeInfo": {
+          "id": "/change/C1IJHBH7YWXC2Q",
+          "status": "PENDING",
+          "submittedAt": "2018-11-12T16:50:38.208Z",
+          "comment": "CloudFront distribution for 'do.horizonsandbox.com'"
+        }
+      }
+    },
+    "instanceId": "6ucp1quwll-8k3ch4yj",
+    "internallyManaged": false,
+    "rootPath": "../../../../../../usr/local/lib/node_modules/serverless-components/registry/aws-route53",
+    "inputs": {
+      "name": "docops-site-6ucp1quwll-9p4od2sy",
+      "domainName": "do.horizonsandbox.com",
+      "dnsName": "d19fuiur7dxmtc.cloudfront.net"
+    }
+  },
+  "example-docs:blogSite:siteCloudFrontConfig": {
+    "instanceId": "6ucp1quwll-71bdjgs0",
+    "type": "aws-cloudfront",
+    "internallyManaged": false,
+    "rootPath": "../../../../../../usr/local/lib/node_modules/serverless-components/registry/aws-cloudfront",
+    "inputs": {
+      "name": "docops",
+      "defaultRootObject": "index.html",
+      "originId": "horizonsandbox.com",
+      "originDomain": "horizonsandbox.com.s3.amazonaws.com",
+      "aliasDomain": "do.horizonsandbox.com",
+      "distributionEnabled": true,
+      "loggingEnabled": false,
+      "loggingBucket": "",
+      "loggingIncludeCookies": false,
+      "loggingPrefix": ""
+    },
+    "state": {
+      "name": "docops",
+      "defaultRootObject": "index.html",
+      "originId": "horizonsandbox.com",
+      "originDomain": "horizonsandbox.com.s3.amazonaws.com",
+      "aliasDomain": "do.horizonsandbox.com",
+      "distributionEnabled": true,
+      "loggingEnabled": false,
+      "loggingBucket": "",
+      "loggingIncludeCookies": false,
+      "loggingPrefix": "",
+      "distribution": {
+        "id": "E2V94Z2QM7B1EY",
+        "arn": "arn:aws:cloudfront::166271209183:distribution/E2V94Z2QM7B1EY",
+        "status": "InProgress",
+        "lastModifiedTime": "2018-11-12T13:05:34.108Z",
+        "domainName": "d19fuiur7dxmtc.cloudfront.net",
+        "location": "https://cloudfront.amazonaws.com/2017-10-30/distribution/E2V94Z2QM7B1EY",
+        "eTag": "E20ZQLU0U9OLC9",
+        "distConfig": {
+          "callerReference": "docops-1542027933",
+          "enabled": true
+        }
+      }
+    }
+  }
+}
